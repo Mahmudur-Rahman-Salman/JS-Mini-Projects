@@ -43,6 +43,9 @@ body{
   -o-transform: translateY(-50%);
   font-size: 1.5em;
 }
+.accordion .content-box.active .label::before{
+  content: "-";
+}
 .accordion .content-box .content{
   position: relative;
   height: 0;
