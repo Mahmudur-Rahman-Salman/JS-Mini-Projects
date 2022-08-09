@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  
+  min-height: 100vh;
+  background-color: aquamarine;
+}
+.headingOne{
+  text-align: center;
+  margin: 50px;
+}
+.accordion{
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.accordion .content-box{
+  position: relative;
+  margin: 10px 20px;
+}
+.accordion .content-box .label{
+  position: relative;
+  padding: 10px;
+  background-color: rgb(127, 127, 193);
+  color: #fff;
+  cursor: pointer;
+}
+.accordion .content-box .label::before{
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.accordion .content-box .content{
+  position: relative;
+  height: 0;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.accordion .content-box.active .content{
+  height: 150px;
+
+}
